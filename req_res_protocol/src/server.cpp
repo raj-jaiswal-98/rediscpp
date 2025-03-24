@@ -8,6 +8,7 @@
 #include <sys/socket.h>
 #include <netinet/ip.h>
 
+#include "lib.h"
 
 using namespace std;
 
@@ -32,16 +33,6 @@ using namespace std;
 //   in6_addr        sin6_addr;     // IPv6
 //   uint32_t        sin6_scope_id; // ignore
 // };
-
-static void msg(const char *msg) {
-  fprintf(stderr, "%s\n", msg);
-}
-
-static void die(const char *msg) {
-  int err = errno;
-  fprintf(stderr, "[%d] %s\n", err, msg);
-  abort();
-}
 
 static void do_something(int connfd) {
   char rbuf[64] = {};
