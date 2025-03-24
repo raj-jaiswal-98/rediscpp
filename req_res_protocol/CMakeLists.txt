@@ -6,5 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_executable(pserver "${PROJECT_SOURCE_DIR}/src/server.cpp")
 add_executable(pclient "${PROJECT_SOURCE_DIR}/src/client.cpp")
 
-add_library(lib "${PROJECT_SOURCE_DIR}/src/lib.cpp")
-target_link_libraries(lib lib.h)
+# add_library(mylib SHARED "${PROJECT_SOURCE_DIR}/src/lib.cpp")
+# target_link_libraries(pserver mylib)
+# target_link_libraries(pclient mylib)
